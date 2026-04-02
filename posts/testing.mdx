@@ -1,15 +1,138 @@
 ---
-title: "Surviving Prime Day: III Lessons from Amazon S3"
-date: "July 2023"
-category: "DEEP DIVE"
-summary: "Reflecting on my internship at AWS during the busiest shopping event of the year."
-readTime: "12 min read"
+title: "Your Blog Title Here"
+date: "2026-04-02"
+category: "Tech"
+summary: "A short summary of what this blog is about."
+readTime: "5 min read"
+image: "/images/datacenter.png"
 ---
 
-At Amazon, Prime Day is not just a commercial event...
+import { StickyNote, SideBySide, Callout, AnimeReveal } from "@/components/mdx-components";
 
-<StickyNote>When you operate at Exabyte scale, conventional wisdom falls apart.</StickyNote>
+# Your Blog Title Here
 
-## The Scaling Reality
+Welcome to your blog. This template demonstrates how each custom MDX component works in real content.
 
-...rest of your content
+---
+
+## ✨ Introduction
+
+<AnimeReveal>
+  <p>
+    This section uses <strong>AnimeReveal</strong> to animate content when it appears.
+    You can wrap anything inside it — paragraphs, headings, even images.
+  </p>
+</AnimeReveal>
+
+---
+
+## 🧠 Sticky Notes (Side Thoughts)
+
+<StickyNote>
+  This is a side note. Use it for insights, tips, or things that shouldn't interrupt
+  the main reading flow.
+</StickyNote>
+
+Here’s your main content. The sticky note floats on large screens and behaves normally on small screens.
+
+---
+
+## 🖼️ Images
+
+![Sample Image](/images/datacenter.png)
+
+Use normal markdown images — they’ll automatically use your styled `next/image`.
+
+---
+
+## 🔄 Side-by-Side Layout
+
+<SideBySide
+  imageSrc="/images/sample.jpg"
+  imageAlt="Example image"
+>
+  <p>
+    This layout is perfect for explaining concepts alongside visuals.
+    You can put <strong>any JSX or markdown</strong> here.
+  </p>
+  <p>
+    Great for tutorials, comparisons, or storytelling.
+  </p>
+</SideBySide>
+
+---
+
+## 🔁 Reversed Layout
+
+<SideBySide
+  imageSrc="/images/sample.jpg"
+  imageAlt="Example image"
+  reverse
+>
+  <p>
+    You can reverse the layout using the <code>reverse</code> prop.
+  </p>
+</SideBySide>
+
+---
+
+## 📢 Callouts
+
+<Callout>
+  This is a default callout. Use it for general notes or highlights.
+</Callout>
+
+<Callout type="warning" emoji="⚠️">
+  This is a warning callout. Use it for caution or important notes.
+</Callout>
+
+<Callout type="danger" emoji="🚨">
+  This is a danger callout. Use it for critical issues or strong emphasis.
+</Callout>
+
+---
+
+## 🎬 Animated Section
+
+<AnimeReveal>
+  <div>
+    <h3>Animated Block</h3>
+    <p>
+      Combine headings, text, and even components inside AnimeReveal
+      for smooth entry animations.
+    </p>
+  </div>
+</AnimeReveal>
+
+---
+
+## 🧩 Combining Components
+
+<SideBySide
+  imageSrc="/images/sample.jpg"
+  imageAlt="Example image"
+>
+  <div>
+    <Callout emoji="🔥">
+      You can even nest components inside each other.
+    </Callout>
+
+    <p>
+      This makes your blog visually rich and interactive without much effort.
+    </p>
+  </div>
+</SideBySide>
+
+---
+
+## 🏁 Conclusion
+
+That’s it — you now have a full reference for:
+
+- Sticky notes
+- Callouts
+- Side-by-side sections
+- Animated reveals
+- Styled images
+
+Use this as a base and remove sections you don’t need when writing real blogs.
