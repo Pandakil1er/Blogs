@@ -1,136 +1,127 @@
 ---
-title: "Your Blog Title Here"
-date: "2026-04-02"
-category: "Tech"
-summary: "A short summary of what this blog is about."
-readTime: "5 min read"
+title: "Modern MDX Portfolio Template"
+date: "2026-04-03"
+category: "Design & Code"
+summary: "Testing the full suite of interactive MDX components."
+readTime: "6 min read"
 image: "/images/datacenter.png"
 ---
 
-import { StickyNote, SideBySide, Callout, AnimeReveal } from "@/components/mdx-components";
+import { 
+  StickyNote, 
+  SideBySide, 
+  Callout, 
+  AnimeReveal, 
+  Steps, 
+  Step, 
+  CardGrid, 
+  Card, 
+  Badge 
+} from "@/components/mdx-components";
 
-# Your Blog Title Here
+# Component Playground
 
-Welcome to your blog. This template demonstrates how each custom MDX component works in real content.
+Welcome to the updated blog template. We've added more structure and visual hierarchy.
 
 ---
 
-## ✨ Introduction
+## 🚀 Getting Started
 
 <AnimeReveal>
-    This section uses <strong>AnimeReveal</strong> to animate content when it appears.
-    You can wrap anything inside it — paragraphs, headings, even images.
+    This project is built with <Badge>Next.js 15</Badge> and <Badge variant="success">Tailwind CSS</Badge>.
+    The goal is to make technical writing as expressive as possible.
 </AnimeReveal>
 
 ---
 
-## 🧠 Sticky Notes (Side Thoughts)
+## 🛠️ The Setup Process
 
-<StickyNote>
-  This is a side note. Use it for insights, tips, or things that shouldn't interrupt
-  the main reading flow.
-</StickyNote>
+<Steps>
+  <Step title="Initialize the project">
+    Start by cloning the repository and installing dependencies. 
+    Make sure you have Node.js 18+ installed.
+  </Step>
 
-Here’s your main content. The sticky note floats on large screens and behaves normally on small screens.
+  <Step title="Configure MDX Components">
+    Import your custom components into the `mdx-components.tsx` file to make them globally available or import them locally in your `.mdx` files.
+  </Step>
+
+  <Step title="Deploy to Vercel">
+    Push your code to GitHub and connect it to Vercel for automatic deployments.
+    <Callout type="success" emoji="✅">
+      Vercel will automatically detect the Next.js framework and optimize your build.
+    </Callout>
+  </Step>
+</Steps>
 
 ---
 
-## 🖼️ Images
-
-![Sample Image](/images/datacenter.png)
-
-Use normal markdown images — they’ll automatically use your styled `next/image`.
-
----
-
-## 🔄 Side-by-Side Layout
+## 🏗️ Architecture Overview
 
 <SideBySide
   imageSrc="/images/sample.jpg"
-  imageAlt="Example image"
+  imageAlt="System Architecture"
 >
-  <p>
-    This layout is perfect for explaining concepts alongside visuals.
-    You can put <strong>any JSX or markdown</strong> here.
-  </p>
-  <p>
-    Great for tutorials, comparisons, or storytelling.
-  </p>
+  <div>
+    <h3>A Modular Approach</h3>
+    <p>
+      By separating logic from content, we can maintain a clean writing experience while 
+      still having access to powerful React features.
+    </p>
+    <StickyNote>
+      Wait! Don't forget to optimize your images using the Next.js Image component.
+    </StickyNote>
+  </div>
 </SideBySide>
 
 ---
 
-## 🔁 Reversed Layout
+## 📚 Resources & Tools
 
-<SideBySide
-  imageSrc="/images/sample.jpg"
-  imageAlt="Example image"
-  reverse
->
-  <p>
-    You can reverse the layout using the <code>reverse</code> prop.
-  </p>
-</SideBySide>
+Use the `CardGrid` to display external links, related posts, or toolkits.
+
+<CardGrid>
+  <Card 
+    title="Documentation" 
+    description="Learn more about how MDX works with Next.js App Router."
+    icon="📄"
+  />
+  <Card 
+    title="Design System" 
+    description="Check out our Figma files for the updated Callout designs."
+    icon="🎨"
+  />
+  <Card 
+    title="Deployment" 
+    description="Steps to push your blog to production with zero downtime."
+    icon="🚀"
+  />
+  <Card 
+    title="Support" 
+    description="Join our Discord if you run into any hydration errors."
+    icon="💬"
+  />
+</CardGrid>
 
 ---
 
-## 📢 Callouts
-
-<Callout>
-  This is a default callout. Use it for general notes or highlights.
-</Callout>
+## 📢 Important Notices
 
 <Callout type="warning" emoji="⚠️">
-  This is a warning callout. Use it for caution or important notes.
+  **Warning:** Ensure you aren't nesting `<p>` tags inside your MDX components to avoid hydration mismatches.
 </Callout>
 
 <Callout type="danger" emoji="🚨">
-  This is a danger callout. Use it for critical issues or strong emphasis.
+  **Critical:** Always include `alt` text for your images to ensure your blog is accessible to everyone.
 </Callout>
-
----
-
-## 🎬 Animated Section
-
-<AnimeReveal>
-  <div>
-    <h3>Animated Block</h3>
-    <p>
-      Combine headings, text, and even components inside AnimeReveal
-      for smooth entry animations.
-    </p>
-  </div>
-</AnimeReveal>
-
----
-
-## 🧩 Combining Components
-
-<SideBySide
-  imageSrc="/images/sample.jpg"
-  imageAlt="Example image"
->
-  <div>
-    <Callout emoji="🔥">
-      You can even nest components inside each other.
-    </Callout>
-
-    <p>
-      This makes your blog visually rich and interactive without much effort.
-    </p>
-  </div>
-</SideBySide>
 
 ---
 
 ## 🏁 Conclusion
 
-That’s it — you now have a full reference for:
+With these new components, you can now build:
+- **Tutorials** using `<Steps />`
+- **Dashboards** using `<CardGrid />`
+- **Technical Specs** using `<Badge />`
 
-- Sticky notes
-- Callouts
-- Side-by-side sections
-- Animated reveals
-- Styled images
-
-Use this as a base and remove sections you don’t need when writing real blogs.
+Happy writing!
