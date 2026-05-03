@@ -1,127 +1,200 @@
 ---
+
 title: "Modern MDX Portfolio Template"
 date: "2026-04-03"
 category: "Design & Code"
 summary: "Testing the full suite of interactive MDX components."
 readTime: "6 min read"
 image: "/images/datacenter.png"
----
+-------------------------------
 
-import { 
-  StickyNote, 
-  SideBySide, 
-  Callout, 
-  AnimeReveal, 
-  Steps, 
-  Step, 
-  CardGrid, 
-  Card, 
-  Badge 
+import {
+StickyNote,
+SideBySide,
+Callout,
+AnimeReveal,
+Float,
+Wave,
+Pulse,
+Spin,
+Jitter,
+Steps,
+Step,
+CardGrid,
+Card,
+Badge
 } from "@/components/mdx-components";
 
-# Component Playground
+# Motion Playground
 
-Welcome to the updated blog template. We've added more structure and visual hierarchy.
+This is no longer just a blog. It’s a **motion-aware writing surface**.
 
 ---
 
-## 🚀 Getting Started
+## 🔁 Live Tech Stack (Marquee)
 
-<AnimeReveal>
-    This project is built with <Badge>Next.js 15</Badge> and <Badge variant="success">Tailwind CSS</Badge>.
-    The goal is to make technical writing as expressive as possible.
+<AnimeReveal speed={90}>
+  <Badge>Next.js</Badge>
+  <Badge variant="success">Tailwind</Badge>
+  <Badge>TypeScript</Badge>
+  <Badge>Anime.js</Badge>
+  <Badge>PostgreSQL</Badge>
 </AnimeReveal>
 
 ---
 
-## 🛠️ The Setup Process
+## 🌊 Motion Primitives
 
-<Steps>
-  <Step title="Initialize the project">
-    Start by cloning the repository and installing dependencies. 
-    Make sure you have Node.js 18+ installed.
-  </Step>
+These are not “animations”—they’re **behaviors** you compose.
 
-  <Step title="Configure MDX Components">
-    Import your custom components into the `mdx-components.tsx` file to make them globally available or import them locally in your `.mdx` files.
-  </Step>
+### Floating (depth)
 
-  <Step title="Deploy to Vercel">
-    Push your code to GitHub and connect it to Vercel for automatic deployments.
-    <Callout type="success" emoji="✅">
-      Vercel will automatically detect the Next.js framework and optimize your build. Gourav Paliwal
-    </Callout>
-  </Step>
-</Steps>
+<Float intensity={12}>
+  <StickyNote>
+    This element gently floats to simulate depth.
+  </StickyNote>
+</Float>
+
+---
+
+### Pulse (attention)
+
+<Pulse scale={1.08}>
+  <Badge variant="success">Live Status</Badge>
+</Pulse>
+
+---
+
+### Wave (rhythmic motion)
+
+<Wave amplitude={30}>
+  <div className="text-lg font-semibold">
+    This text moves like a waveform.
+  </div>
+</Wave>
+
+---
+
+### Spin (continuous energy)
+
+<Spin speed={3000}>
+  <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-white">
+    ⚙️
+  </div>
+</Spin>
+
+---
+
+### Jitter (glitch / indie vibe)
+
+<Jitter intensity={5}>
+  <div className="font-mono text-sm">
+    system.out.println("unstable energy");
+  </div>
+</Jitter>
+
+---
+
+## 🛠️ Composition Example
+
+Motion becomes powerful when layered.
+
+<AnimeReveal speed={110}>
+  <Float>
+    <Badge>React</Badge>
+  </Float>
+
+  <Wave>
+    <Badge>Docker</Badge>
+  </Wave>
+
+  <Pulse>
+    <Badge variant="success">AWS</Badge>
+  </Pulse>
+
+  <Jitter>
+    <Badge>Redis</Badge>
+  </Jitter>
+</AnimeReveal>
 
 ---
 
 ## 🏗️ Architecture Overview
 
 <SideBySide
-  imageSrc="/images/sample.jpg"
-  imageAlt="System Architecture"
+imageSrc="https://github.com/Pandakil1er/Blogs/blob/main/images/datacenter.png"
+imageAlt="System Architecture"
+
 >
+
   <div>
-    <h3>A Modular Approach</h3>
+    <h3>Composable Motion System</h3>
     <p>
-      By separating logic from content, we can maintain a clean writing experience while 
-      still having access to powerful React features.
+      Instead of one-off animations, we define reusable motion primitives 
+      that can be layered and reused across the system.
     </p>
-    <StickyNote>
-      Wait! Don't forget to optimize your images using the Next.js Image component.
-    </StickyNote>
+
+```
+<Float>
+  <StickyNote>
+    Motion should feel like physics, not decoration.
+  </StickyNote>
+</Float>
+```
+
   </div>
 </SideBySide>
 
 ---
 
-## 📚 Resources & Tools
-
-Use the `CardGrid` to display external links, related posts, or toolkits.
+## 📚 Use Cases
 
 <CardGrid>
   <Card 
-    title="Documentation" 
-    description="Learn more about how MDX works with Next.js App Router."
-    icon="📄"
+    title="Live Dashboards" 
+    description="Use marquee + pulse for real-time systems."
+    icon="📊"
   />
   <Card 
-    title="Design System" 
-    description="Check out our Figma files for the updated Callout designs."
-    icon="🎨"
+    title="Indie Blogs" 
+    description="Add subtle float + wave for personality."
+    icon="✍️"
   />
   <Card 
-    title="Deployment" 
-    description="Steps to push your blog to production with zero downtime."
+    title="Landing Pages" 
+    description="Use spin + marquee to guide attention."
     icon="🚀"
   />
   <Card 
-    title="Support" 
-    description="Join our Discord if you run into any hydration errors."
-    icon="💬"
+    title="Experimental UI" 
+    description="Combine jitter + wave for glitch aesthetics."
+    icon="⚡"
   />
 </CardGrid>
 
 ---
 
-## 📢 Important Notices
+## 📢 Notes
 
 <Callout type="warning" emoji="⚠️">
-  **Warning:** Ensure you aren't nesting `<p>` tags inside your MDX components to avoid hydration mismatches.
+  Continuous animations should be used intentionally. Overuse can reduce readability.
 </Callout>
 
-<Callout type="danger" emoji="🚨">
-  **Critical:** Always include `alt` text for your images to ensure your blog is accessible to everyone.
+<Callout type="success" emoji="✨">
+  Combine multiple primitives to create a unique motion identity.
 </Callout>
 
 ---
 
 ## 🏁 Conclusion
 
-With these new components, you can now build:
-- **Tutorials** using `<Steps />`
-- **Dashboards** using `<CardGrid />`
-- **Technical Specs** using `<Badge />`
+You now have:
 
-Happy writing!
+* **Marquee systems** (`AnimeReveal`)
+* **Ambient motion** (`Float`, `Wave`)
+* **Attention hooks** (`Pulse`, `Spin`)
+* **Personality layers** (`Jitter`)
+
+This shifts your blog from **static content → expressive interface**.
+
+---
